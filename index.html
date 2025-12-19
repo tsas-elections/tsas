@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSAS - Telangana Students Association for Solidarity</title>
+
+    <!-- Primary meta -->
+    <meta name="description" content="Telangana Students Association for Solidarity — Official Student Election Notices & Updates.">
+
+    <!-- Open Graph / social preview (use a fully-qualified URL when deploying) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Telangana Students Association for Solidarity (TSAS)">
+    <meta property="og:description" content="Official Student Election Notices & Updates">
+    <meta property="og:image" content="tsas.jpeg">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Telangana Students Association for Solidarity (TSAS)">
+    <meta name="twitter:description" content="Official Student Election Notices & Updates">
+    <meta name="twitter:image" content="tsas.jpeg">
+
+    <!-- Browser tab icon (favicon) -->
+    <link rel="icon" href="tsas.jpeg">
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg tsas-nav sticky-top" aria-label="Primary">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="tsas.jpeg" alt="TSAS" class="nav-logo" width="32" height="32" decoding="async">
+                <span class="brand-text">TSAS</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notices.html">Notices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="election-details.html">Election Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guidelines.html">Guidelines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="tsas-hero" id="top">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <div class="hero-kicker">Telangana Students Association for Solidarity</div>
+                    <h1 class="hero-title">Official Student Election Notices & Updates</h1>
+                    <p class="hero-subtitle">
+                        A reliable, student-first portal for election-related notices, timelines, and official circulars.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-tsas btn-lg" href="notices.html">View Latest Notices</a>
+                        <a class="btn btn-outline-secondary btn-lg" href="election-details.html">Election Timeline</a>
+                    </div>
+                </div>
+
+                <div class="hero-card" aria-hidden="true">
+                    <div class="hero-card-inner">
+                        <img src="tsas.jpeg" alt="" class="hero-logo" width="96" height="96" decoding="async">
+                        <div class="hero-card-title">TSAS Election Portal</div>
+                        <div class="hero-card-subtitle">Official notices • Key dates • Student guidelines</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4 my-md-5">
+        <!-- Notice Board (Homepage Preview) -->
+        <section class="section" aria-labelledby="notice-board-title">
+            <div class="section-head">
+                <div>
+                    <div class="section-kicker">Notice Board</div>
+                    <h2 class="section-title" id="notice-board-title">Latest Election Notices</h2>
+                </div>
+                <a class="link-strong" href="notices.html">View all notices</a>
+            </div>
+
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="home-notice-container" class="notice-list">
+                        <p class="text-muted mb-0">Loading notices...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="row g-4 mt-1">
+            <!-- Election Timeline / Key Dates -->
+            <section class="col-12 col-lg-6 section" aria-labelledby="timeline-title">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Election Timeline</div>
+                        <h2 class="section-title" id="timeline-title">Key Dates</h2>
+                    </div>
+                    <a class="link-strong" href="election-details.html">View details</a>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-body">
+                        <ol class="timeline">
+                            <li class="timeline-item">
+                                <div class="timeline-date">To be announced</div>
+                                <div class="timeline-title">Notification & nominations</div>
+                                <div class="timeline-desc">Official election notification and nomination schedule.</div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-date">To be announced</div>
+                                <div class="timeline-title">Campaign period</div>
+                                <div class="timeline-desc">Student outreach and campaigning as per guidelines.</div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-date">To be announced</div>
+                                <div class="timeline-title">Voting & results</div>
+                                <div class="timeline-desc">Voting day information and results announcement.</div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guidelines (Summary) -->
+            <section class="col-12 col-lg-6 section" aria-labelledby="guidelines-title">
+                <div class="section-head">
+                    <div>
+                        <div class="section-kicker">Guidelines</div>
+                        <h2 class="section-title" id="guidelines-title">For Students</h2>
+                    </div>
+                    <a class="link-strong" href="guidelines.html">Read all</a>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-body">
+                        <ul class="guidelines">
+                            <li><strong>Eligibility:</strong> Verify your eligibility before voting.</li>
+                            <li><strong>Conduct:</strong> Follow campus conduct rules during elections.</li>
+                            <li><strong>Fairness:</strong> Report issues through official channels.</li>
+                        </ul>
+                        <div class="mt-3">
+                            <a class="btn btn-outline-secondary" href="guidelines.html">Open voting rules</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Announcements / Circulars (Preview) -->
+        <section class="section mt-4" aria-labelledby="announcements-title">
+            <div class="section-head">
+                <div>
+                    <div class="section-kicker">Announcements</div>
+                    <h2 class="section-title" id="announcements-title">Circulars & Updates</h2>
+                </div>
+                <a class="link-strong" href="notices.html#announcements">View all</a>
+            </div>
+
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="home-announcement-container" class="announcement-list">
+                        <p class="text-muted mb-0">Loading announcements...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tsas-footer" aria-label="Footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-title">Telangana Students Association for Solidarity (TSAS)</div>
+                    <div class="footer-text">Official Student Body — Election Notices & Updates</div>
+                </div>
+
+                <div>
+                    <div class="footer-title">Contact</div>
+                    <div class="footer-text">Email: <span class="text-muted">(add official email)</span></div>
+                    <div class="footer-text">Location: <span class="text-muted">RGUKT Telangana</span></div>
+                </div>
+
+                <div>
+                    <div class="footer-title">Disclaimer</div>
+                    <div class="footer-text">This portal publishes official election-related communications for students.</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">© 2025 TSAS • All rights reserved</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/loadHomeNotices.js"></script>
+    <script src="js/loadHomeAnnouncements.js"></script>
+</body>
+</html>

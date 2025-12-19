@@ -1,0 +1,471 @@
+/*
+  TSAS Frontend Styling
+  - Civic / academic look (student union portal style)
+  - Telangana-inspired accents (subtle reds, neutrals)
+  - Mobile-first, high-contrast notice readability
+*/
+
+:root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface-2: #f1f5f9;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #475569;
+
+    /* Telangana-inspired accents */
+    --tsas-red: #b91c1c;
+    --tsas-red-2: #dc2626;
+    --tsas-saffron: #c2410c;
+
+    --link: #1d4ed8;
+    --shadow: 0 10px 26px rgba(2, 6, 23, 0.08);
+
+    --radius: 16px;
+    --radius-sm: 12px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: radial-gradient(900px 520px at 15% 0%, rgba(185, 28, 28, 0.08), transparent 55%),
+                radial-gradient(900px 520px at 85% 20%, rgba(194, 65, 12, 0.06), transparent 55%),
+                linear-gradient(180deg, var(--bg), #ffffff);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--link); }
+
+/* Bootstrap tweaks */
+.text-muted { color: var(--muted) !important; }
+
+.btn-tsas {
+    background: linear-gradient(135deg, var(--tsas-red), var(--tsas-red-2));
+    border: 0;
+    color: #fff;
+    box-shadow: 0 10px 22px rgba(185, 28, 28, 0.18);
+}
+
+.btn-tsas:hover {
+    color: #fff;
+    filter: brightness(0.98);
+}
+
+.btn-outline-secondary {
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+.btn-outline-secondary:hover {
+    background: #0f172a;
+    border-color: #0f172a;
+}
+
+.btn { transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease; }
+.btn:hover { transform: translateY(-1px); }
+
+/* ---------------------
+   NAV
+--------------------- */
+.tsas-nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+}
+
+.tsas-nav .navbar-toggler {
+    border-color: #cbd5e1;
+}
+
+.tsas-nav .navbar-toggler-icon {
+    filter: invert(0.25);
+}
+
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+.brand-text {
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    color: var(--text);
+}
+
+.tsas-nav .nav-link {
+    color: var(--text);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.tsas-nav .nav-link:hover {
+    background: rgba(15, 23, 42, 0.05);
+}
+
+.tsas-nav .nav-link.active {
+    background: rgba(185, 28, 28, 0.08);
+    color: var(--text);
+}
+
+/* ---------------------
+   HERO (Homepage)
+--------------------- */
+.tsas-hero {
+    padding: 26px 0 10px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.hero-kicker {
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: rgba(185, 28, 28, 0.9);
+}
+
+.hero-title {
+    font-weight: 950;
+    letter-spacing: -0.4px;
+    line-height: 1.12;
+    margin: 10px 0 8px;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+
+.hero-subtitle {
+    color: var(--muted);
+    max-width: 70ch;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.hero-card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, rgba(185, 28, 28, 0.06), rgba(194, 65, 12, 0.04));
+    box-shadow: var(--shadow);
+}
+
+.hero-card-inner {
+    padding: 18px;
+}
+
+.hero-logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    background: #fff;
+}
+
+.hero-card-title {
+    margin-top: 12px;
+    font-weight: 900;
+}
+
+.hero-card-subtitle {
+    color: var(--muted);
+    font-weight: 650;
+}
+
+@media (min-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1.3fr 0.7fr;
+        align-items: center;
+    }
+}
+
+/* ---------------------
+   PAGE HERO (Inner pages)
+--------------------- */
+.page-hero {
+    padding: 18px 0 0;
+}
+
+.page-hero-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0 6px;
+}
+
+.tsas-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    background: #fff;
+}
+
+.page-kicker {
+    color: rgba(185, 28, 28, 0.9);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.76rem;
+}
+
+.page-title {
+    margin: 0;
+    font-weight: 950;
+    letter-spacing: -0.3px;
+}
+
+.page-subtitle {
+    margin: 4px 0 0;
+    color: var(--muted);
+}
+
+/* ---------------------
+   SECTIONS / PANELS
+--------------------- */
+.section { margin-top: 6px; }
+
+.section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.section-kicker {
+    color: rgba(185, 28, 28, 0.9);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.76rem;
+}
+
+.section-title {
+    margin: 4px 0 0;
+    font-weight: 950;
+    letter-spacing: -0.25px;
+}
+
+.link-strong {
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.link-strong:hover { text-decoration: underline; }
+
+.panel {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.panel-body { padding: 14px; }
+
+/* ---------------------
+   NOTICE / ANNOUNCEMENT LIST
+--------------------- */
+.notice-list,
+.announcement-list {
+    display: grid;
+    gap: 12px;
+}
+
+.notice-card,
+.announcement {
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 14px;
+    box-shadow: 0 8px 18px rgba(2, 6, 23, 0.06);
+}
+
+.notice-card {
+    border-left: 4px solid rgba(185, 28, 28, 0.35);
+}
+
+.notice-card.is-urgent {
+    border-left-color: var(--tsas-red);
+    background: #fff1f2;
+}
+
+.notice-title {
+    color: var(--text);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.notice-title:hover { text-decoration: underline; }
+
+.notice-meta {
+    color: var(--muted);
+    font-weight: 650;
+    font-size: 0.92rem;
+    margin-top: 2px;
+}
+
+.notice-desc {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.notice-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.78rem;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text);
+}
+
+.tag-new {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.25);
+}
+
+.tag-urgent {
+    background: rgba(185, 28, 28, 0.10);
+    border-color: rgba(185, 28, 28, 0.25);
+}
+
+.link-read {
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.link-read:hover { text-decoration: underline; }
+
+/* ---------------------
+   TIMELINE
+--------------------- */
+.timeline {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.timeline-item {
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+}
+
+.timeline-date {
+    font-weight: 900;
+    color: rgba(185, 28, 28, 0.9);
+}
+
+.timeline-title {
+    font-weight: 900;
+    margin-top: 2px;
+}
+
+.timeline-desc {
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+/* ---------------------
+   GUIDELINES
+--------------------- */
+.guidelines {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    display: grid;
+    gap: 8px;
+}
+
+.guidelines strong { color: var(--text); }
+
+/* ---------------------
+   FOOTER
+--------------------- */
+.tsas-footer {
+    margin-top: 44px;
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    background: #ffffff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.footer-title {
+    font-weight: 950;
+    letter-spacing: -0.15px;
+}
+
+.footer-text { color: var(--muted); }
+
+.footer-bottom {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-weight: 650;
+}
+
+@media (min-width: 768px) {
+    .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
+}
+
+/* ---------------------
+   ANIMATIONS (subtle)
+--------------------- */
+@media (prefers-reduced-motion: no-preference) {
+    .notice-card,
+    .announcement,
+    .panel,
+    .hero-card {
+        transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .notice-card:hover,
+    .announcement:hover,
+    .panel:hover,
+    .hero-card:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 30px rgba(2, 6, 23, 0.10);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+}
