@@ -59,7 +59,7 @@
                     <div class="hero-kicker">Telangana Students Association for Solidarity</div>
                     <h1 class="hero-title">Official Student Election Notices & Updates</h1>
                     <p class="hero-subtitle">
-                        A reliable, student-first portal for election-related notices, timelines, and official circulars.
+                        A reliable, student-first portal for election-related notices, timelines, and official circulars of TSAS.
                     </p>
                     <div class="hero-actions">
                         <a class="btn btn-tsas btn-lg" href="notices.html">View Latest Notices</a>
@@ -91,8 +91,39 @@
 
             <div class="panel">
                 <div class="panel-body">
-                    <div id="home-notice-container" class="notice-list">
-                        <p class="text-muted mb-0">Loading notices...</p>
+                    <!-- Homepage preview of the election notice (opens modal) -->
+                    <div class="mb-2 d-flex align-items-start justify-content-between">
+                        <div>
+                            <strong>Election Notice — Official (PDF)</strong>
+                            <div class="text-muted small">14-12-2025</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#electionModal">View</button>
+                            <a class="btn btn-sm btn-outline-secondary ms-2" href="notices.html#election">Open on Notices</a>
+                        </div>
+                    </div>
+
+                    <p class="text-muted small mt-2">Click "View" to open the notice in a viewer. If the preview doesn't load, open the file directly <a href="./election-notice-tsas.pdf" target="_blank" rel="noopener">here</a>.</p>
+                </div>
+            </div>
+
+            <!-- Modal: Election Notice Viewer -->
+            <div class="modal fade" id="electionModal" tabindex="-1" aria-labelledby="electionModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="electionModalLabel">Election Notice — 14-12-2025</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="./election-notice-tsas.pdf#toolbar=0" title="Election Notice" style="border:0;" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-outline-light" href="./election-notice-tsas.pdf" target="_blank" rel="noopener">Open in new tab</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,19 +144,19 @@
                     <div class="panel-body">
                         <ol class="timeline">
                             <li class="timeline-item">
-                                <div class="timeline-date">To be announced</div>
-                                <div class="timeline-title">Notification & nominations</div>
-                                <div class="timeline-desc">Official election notification and nomination schedule.</div>
+                                <div class="timeline-date"><strong>20 Dec 2025</strong></div>
+                                <div class="timeline-title">Filing of Nominations</div>
+                                <div class="timeline-desc">Start of nomination filing for all eligible candidates.</div>
                             </li>
                             <li class="timeline-item">
-                                <div class="timeline-date">To be announced</div>
-                                <div class="timeline-title">Campaign period</div>
-                                <div class="timeline-desc">Student outreach and campaigning as per guidelines.</div>
+                                <div class="timeline-date"><strong>21 Dec 2025</strong></div>
+                                <div class="timeline-title">Last Date for Nominations</div>
+                                <div class="timeline-desc">Final date to submit nomination forms.</div>
                             </li>
                             <li class="timeline-item">
-                                <div class="timeline-date">To be announced</div>
-                                <div class="timeline-title">Voting & results</div>
-                                <div class="timeline-desc">Voting day information and results announcement.</div>
+                                <div class="timeline-date"><strong>22 Dec 2025</strong></div>
+                                <div class="timeline-title">Nominations list Release</div>
+                                <div class="timeline-desc">Scrutiny & Display of Valid Nominations.</div>
                             </li>
                         </ol>
                     </div>
