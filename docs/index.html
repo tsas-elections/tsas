@@ -44,7 +44,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="notices.html">Notices</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nominations.html">Nominations</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="nominations.html">Nominations</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="election-details.html">Election Details</a></li>
                     <li class="nav-item"><a class="nav-link" href="guidelines.html">Guidelines</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -63,8 +63,9 @@
                         A reliable, student-first portal for election-related notices, timelines, and official circulars of TSAS.
                     </p>
                     <div class="hero-actions">
-                        <a class="btn btn-tsas btn-lg" href="nominations.html">Nomination</a>
-                        <a class="btn btn-outline-secondary btn-lg" href="election-details.html">Election Timeline</a>
+                        <!-- <a class="btn btn-tsas btn-lg" href="nominations.html">Nomination</a> -->
+                        <a class="btn btn-tsas btn-lg" href="election-details.html">Election Timeline</a>
+                        <!-- <a class="btn btn-outline-secondary btn-lg" href="election-details.html">Election Timeline</a> -->
                     </div>
                 </div>
 
@@ -92,19 +93,63 @@
 
             <div class="panel">
                 <div class="panel-body">
-                    <!-- Homepage preview of the election notice (opens modal) -->
-                    <div class="mb-2 d-flex align-items-start justify-content-between">
-                        <div>
-                            <strong>Election Notice Official (PDF)</strong>
-                            <div class="text-muted small">14-12-2025</div>
-                        </div>
-                        <div>
-                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#electionModal">View</button>
-                            <a class="btn btn-sm btn-outline-secondary ms-2" href="notices.html#election">Open on Notices</a>
-                        </div>
-                    </div>
+                    <ul class="notice-list">
+                        <!-- Election notice: view inline (collapse) + fallback link -->
+                        <li id="election" class="notice-item">
+                            <ol class="timeline">
+                            <div class="notice-meta">
+                                <time datetime="2025-12-14">20-12-2025</time>
+                            </div>
+                            
+                            <li class="timeline-item">
 
-                    <p class="text-muted small mt-2">Click "View" to open the notice in a viewer. If the preview doesn't load, open the file directly <a href="./election-notice-tsas.pdf" target="_blank" rel="noopener">here</a>.</p>
+                            <div class="timeline-title">Valid Nominations</div>
+                            <div class="timeline-desc">This is the list of valid nominations.</div>
+                            <div class="timeline-desc"><strong>President:</strong></div>
+                            <ol>
+                                <li>Navaneeth Samilla – MECH – E3 (B211023)</li>
+                                <li>Vinay Ravala – ECE – E3 (B211195)</li>
+                                <li>Balaji – MECH – E3 (B211684)</li>
+                            </ol>
+                            <div class="timeline-desc"><strong>Vice President:</strong></div>
+                            <ol>
+                                <li>Mohammed Ajmal Khan – MECH – E2 (B220643)</li>
+                                <li>Komal Kumari – CSE – E1 (B230493)</li>
+                                <li>Nalam Harshith – CSE – E1 (B230315)</li>
+                            </ol>
+                            <div class="timeline-desc"><strong>General Secretary:</strong></div>
+                            <ol>
+                                <li>Mohammed Afrid – CHE – E3 (B211147)</li>
+                                <li>Banoth Jashwanth – CHE – E1 (B231380)</li>
+                                <li>Bare Akash – ECE – E3 (B211451)</li>
+                            </ol>
+                            </li>
+                            </ol>
+                            </li>
+                            </ol>
+                            <li id="election" class="notice-item">
+                            <div class="notice-meta">
+                                <time datetime="2025-12-14">14-12-2025</time>
+                            </div>
+                            <div class="notice-content">
+                                <a href="./election-notice-tsas.pdf" target="_blank" rel="noopener">Election Notice Official (PDF)</a>
+
+                                <button class="btn btn-sm btn-outline-primary ms-2" data-bs-toggle="collapse" data-bs-target="#electionPdf" aria-expanded="false" aria-controls="electionPdf">
+                                    View
+                                </button>
+
+                                <div class="collapse mt-3" id="electionPdf">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="./election-notice-tsas.pdf" title="Election Notice" style="border:0;" loading="lazy"></iframe>
+                                    </div>
+                                    <p class="text-muted small mt-2">
+                                        If the PDF does not display in your browser, download it <a href="./election-notice-tsas.pdf" target="_blank" rel="noopener">here</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ...other notices... -->
+                    </ul>
                 </div>
             </div>
 
