@@ -469,3 +469,40 @@ a { color: var(--link); }
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition: none !important; }
 }
+
+
+/* Responsive Google Form Embed */
+.google-form-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Default (Desktop) */
+.google-form-wrapper iframe {
+    width: 100%;
+    height: 2300px; /* desktop-safe height */
+    border: 0;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .google-form-wrapper iframe {
+        height: 2600px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .google-form-wrapper iframe {
+        height: 3000px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .google-form-wrapper iframe {
+        height: 3400px;
+    }
+}
+
